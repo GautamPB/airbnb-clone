@@ -6,14 +6,16 @@ import { UserCircleIcon } from '@heroicons/react/solid'
 
 const Header = () => {
     return (
-        <header className="grid p-5 bg-white grid-cols-3 items-center shadow-lg">
+        <header className="flex md:grid px-2 py-3 md:p-5 bg-white md:grid-cols-3 items-center shadow-lg z-50 sticky top-0">
             {/* left */}
-            <div className="flex h-10 cursor-pointer relative">
+            <div className="flex h-10 cursor-pointer relative mr-auto">
                 <Image
                     src="https://links.papareact.com/qd3"
-                    layout="fill"
-                    objectFit="contain"
-                    objectPosition="left"
+                    width={130}
+                    height={70}
+                    // layout="fill"
+                    // objectFit="contain"
+                    // objectPosition="left"
                     alt=""
                 />
             </div>
@@ -24,12 +26,12 @@ const Header = () => {
                     placeholder="Where are you going?"
                     className="w-full bg-transparent outline-none border-none"
                 />
-                <SearchIcon className="h-10 bg-[#FD595E] p-2 text-white rounded-[999px] cursor-pointer" />
+                <SearchIcon className="hidden md:inline-block md:h-10 md:bg-[#FD595E] p-2 md:text-white md:rounded-[999px] cursor-pointer" />
             </div>
 
             {/* right */}
             <div className="ml-auto flex items-center space-x-4">
-                <div className="flex items-center space-x-2">
+                <div className="hidden md:flex md:items-center md:space-x-2">
                     <p className="font-medium cursor-pointer">Become a host</p>
                     <GlobeAltIcon className="h-6 text-black cursor-pointer" />
                 </div>
